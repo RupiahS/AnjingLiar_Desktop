@@ -166,6 +166,19 @@ namespace Couvee_P3L_Kelompok2
 
         }
 
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 login = new Form1();
+            login.Show();
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void label7_Click_1(object sender, EventArgs e)
         {
             
