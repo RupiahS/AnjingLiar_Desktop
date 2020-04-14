@@ -147,7 +147,7 @@ namespace Couvee_P3L_Kelompok2
                 con.Open();
                 MySqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE `employees` SET `employee_id` = '" + Form_Main.id + "',`role_id` = '" + Convert.ToInt32(textRoleID.Text) + "',  `employee_name` = '" + textEmployeeName.Text + "', `employee_address`= '" + textAddress.Text + "', `employee_phoneno`= '" + Convert.ToInt32(textPhoneNumber.Text) + "', `employee_birth`= '" + textBirth.Text + "', `username`= '" + textUsername.Text + "', `password`= '" + textPassword.Text + "',`UPDATE_AT`= current_timestamp(), `DELETED_AT` = NULL WHERE `employee_id`= '" + textEmployeeID.Text + "'";
+                cmd.CommandText = "UPDATE `employees` SET `role_id` = '" + Convert.ToInt32(textRoleID.Text) + "',  `employee_name` = '" + textEmployeeName.Text + "', `employee_address`= '" + textAddress.Text + "', `employee_phoneno`= '" + Convert.ToInt32(textPhoneNumber.Text) + "', `employee_birth`= '" + textBirth.Text + "', `username`= '" + textUsername.Text + "', `password`= '" + textPassword.Text + "',`UPDATED_AT`= current_timestamp() WHERE `employee_id`= '" + textEmployeeID.Text + "'";
                 cmd.ExecuteNonQuery();
 
                 con.Close();

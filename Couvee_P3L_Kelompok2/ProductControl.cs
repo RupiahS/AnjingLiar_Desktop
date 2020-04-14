@@ -48,7 +48,7 @@ namespace Couvee_P3L_Kelompok2
                 pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
                 byte[] img = ms.ToArray();
 
-                MySqlCommand command = new MySqlCommand("UPDATE products SET employee_id=@employee_id, product_name=product_name, product_price=@product_price, product_quantity=@product_quantity, image=@img, UPDATE_AT=@updated_at WHERE product_id=@product_id", con);
+                MySqlCommand command = new MySqlCommand("UPDATE products SET employee_id=@employee_id, product_name=@product_name, product_price=@product_price, product_quantity=@product_quantity, image=@img, UPDATE_AT=@updated_at WHERE product_id=@product_id", con);
                 con.Open();
 
                 command.Parameters.Add("@employee_id", MySqlDbType.Int32).Value = Form_Main.id;
