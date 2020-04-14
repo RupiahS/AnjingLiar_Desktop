@@ -30,12 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonLogout = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.customerControl1 = new Couvee_P3L_Kelompok2.CustomerControl();
-            this.employeeControl1 = new Couvee_P3L_Kelompok2.EmployeeControl();
-            this.serviceControl1 = new Couvee_P3L_Kelompok2.ServiceControl();
-            this.productControl1 = new Couvee_P3L_Kelompok2.ProductControl();
             this.buttonProduct = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonService = new System.Windows.Forms.Button();
@@ -48,7 +45,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonLogout = new System.Windows.Forms.Button();
+            this.customerControl1 = new Couvee_P3L_Kelompok2.CustomerControl();
+            this.employeeControl1 = new Couvee_P3L_Kelompok2.EmployeeControl();
+            this.serviceControl1 = new Couvee_P3L_Kelompok2.ServiceControl();
+            this.productControl1 = new Couvee_P3L_Kelompok2.ProductControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -82,6 +82,19 @@
             this.panel2.TabIndex = 12;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // buttonLogout
+            // 
+            this.buttonLogout.BackColor = System.Drawing.Color.Black;
+            this.buttonLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.ForeColor = System.Drawing.Color.White;
+            this.buttonLogout.Location = new System.Drawing.Point(861, 31);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(143, 35);
+            this.buttonLogout.TabIndex = 12;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseVisualStyleBackColor = false;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Couvee_P3L_Kelompok2.Properties.Resources.icon;
@@ -107,36 +120,6 @@
             this.panel4.Size = new System.Drawing.Size(1027, 570);
             this.panel4.TabIndex = 13;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // customerControl1
-            // 
-            this.customerControl1.Location = new System.Drawing.Point(0, 0);
-            this.customerControl1.Name = "customerControl1";
-            this.customerControl1.Size = new System.Drawing.Size(1027, 571);
-            this.customerControl1.TabIndex = 3;
-            this.customerControl1.Load += new System.EventHandler(this.customerControl1_Load);
-            // 
-            // employeeControl1
-            // 
-            this.employeeControl1.Location = new System.Drawing.Point(0, 0);
-            this.employeeControl1.Name = "employeeControl1";
-            this.employeeControl1.Size = new System.Drawing.Size(1027, 571);
-            this.employeeControl1.TabIndex = 2;
-            // 
-            // serviceControl1
-            // 
-            this.serviceControl1.Location = new System.Drawing.Point(0, 0);
-            this.serviceControl1.Name = "serviceControl1";
-            this.serviceControl1.Size = new System.Drawing.Size(1027, 710);
-            this.serviceControl1.TabIndex = 1;
-            this.serviceControl1.Load += new System.EventHandler(this.serviceControl1_Load);
-            // 
-            // productControl1
-            // 
-            this.productControl1.Location = new System.Drawing.Point(0, 0);
-            this.productControl1.Name = "productControl1";
-            this.productControl1.Size = new System.Drawing.Size(1027, 571);
-            this.productControl1.TabIndex = 0;
             // 
             // buttonProduct
             // 
@@ -309,18 +292,35 @@
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // buttonLogout
+            // customerControl1
             // 
-            this.buttonLogout.BackColor = System.Drawing.Color.Black;
-            this.buttonLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogout.ForeColor = System.Drawing.Color.White;
-            this.buttonLogout.Location = new System.Drawing.Point(872, 31);
-            this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(132, 32);
-            this.buttonLogout.TabIndex = 12;
-            this.buttonLogout.Text = "Logout";
-            this.buttonLogout.UseVisualStyleBackColor = false;
-            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            this.customerControl1.Location = new System.Drawing.Point(0, 0);
+            this.customerControl1.Name = "customerControl1";
+            this.customerControl1.Size = new System.Drawing.Size(1027, 571);
+            this.customerControl1.TabIndex = 3;
+            this.customerControl1.Load += new System.EventHandler(this.customerControl1_Load);
+            // 
+            // employeeControl1
+            // 
+            this.employeeControl1.Location = new System.Drawing.Point(0, 0);
+            this.employeeControl1.Name = "employeeControl1";
+            this.employeeControl1.Size = new System.Drawing.Size(1027, 571);
+            this.employeeControl1.TabIndex = 2;
+            // 
+            // serviceControl1
+            // 
+            this.serviceControl1.Location = new System.Drawing.Point(0, 0);
+            this.serviceControl1.Name = "serviceControl1";
+            this.serviceControl1.Size = new System.Drawing.Size(1027, 710);
+            this.serviceControl1.TabIndex = 1;
+            this.serviceControl1.Load += new System.EventHandler(this.serviceControl1_Load);
+            // 
+            // productControl1
+            // 
+            this.productControl1.Location = new System.Drawing.Point(0, 0);
+            this.productControl1.Name = "productControl1";
+            this.productControl1.Size = new System.Drawing.Size(1027, 571);
+            this.productControl1.TabIndex = 0;
             // 
             // Form_Main
             // 
